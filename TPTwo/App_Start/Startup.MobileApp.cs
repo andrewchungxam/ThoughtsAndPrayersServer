@@ -10,6 +10,10 @@ using TPTwo.DataObjects;
 using TPTwo.Models;
 using Owin;
 
+//CHANGE
+using System.Data.Entity.Migrations;
+using TPTwo.Migrations;
+
 namespace TPTwo
 {
     public partial class Startup
@@ -22,8 +26,11 @@ namespace TPTwo
                 .UseDefaultConfiguration()
                 .ApplyTo(config);
 
+            //CHANGE
             // Use Entity Framework Code First to create database tables based on your DbContext
-            Database.SetInitializer(new MobileServiceInitializer());
+            //Database.SetInitializer(new MobileServiceInitializer());
+            var migrator = new DbMigrator(new Migrations.Configuration());
+            migrator.Update();
 
             MobileAppSettingsDictionary settings = config.GetMobileAppSettingsProvider().GetMobileAppSettings();
 
@@ -43,9 +50,9 @@ namespace TPTwo
             app.UseWebApi(config);
         }
     }
-
-    //    public class MobileServiceInitializer : CreateDatabaseIfNotExists<MobileServiceContext>
-    public class MobileServiceInitializer : DropCreateDatabaseIfModelChanges<MobileServiceContext>
+    // CHANGE
+        public class MobileServiceInitializer : CreateDatabaseIfNotExists<MobileServiceContext>
+    //public class MobileServiceInitializer : DropCreateDatabaseIfModelChanges<MobileServiceContext>
     {
         protected override void Seed(MobileServiceContext context)
         {
