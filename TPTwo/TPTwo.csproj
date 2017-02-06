@@ -192,15 +192,6 @@
     <Compile Include="DataObjects\SurveyQuestion.cs" />
     <Compile Include="DataObjects\SurveyResponse.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
-    <Compile Include="Migrations\201701242214255_Restore_Questions.cs" />
-    <Compile Include="Migrations\201701242214255_Restore_Questions.Designer.cs">
-      <DependentUpon>201701242214255_Restore_Questions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201701250144410_Added two fields to Questions.cs" />
-    <Compile Include="Migrations\201701250144410_Added two fields to Questions.Designer.cs">
-      <DependentUpon>201701250144410_Added two fields to Questions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -222,14 +213,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\TPTwo20161201101339.pubxml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201701242214255_Restore_Questions.resx">
-      <DependentUpon>201701242214255_Restore_Questions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201701250144410_Added two fields to Questions.resx">
-      <DependentUpon>201701250144410_Added two fields to Questions.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

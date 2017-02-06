@@ -21,9 +21,6 @@ namespace TPTwo.DataObjects
 
         public string SharedText { get; set; }
 
-        public string NewText { get; set; }
-
-        public string FBProfileUrl { get; set; }
 
     }
 }

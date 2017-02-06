@@ -19,7 +19,5 @@ namespace TPTwo.DataObjects
         [JsonProperty("answer")]
         public int AnswerIndex { get; set; }
 
-
-
     }
 }
