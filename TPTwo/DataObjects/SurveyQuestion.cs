@@ -21,6 +21,14 @@ namespace TPTwo.DataObjects
 
         public string SharedText { get; set; }
 
+        //public string EarlyText { get; set; }
+        //made after rollback to InitialDatabase using regular initialization
+
+        //public string NewText { get; set; }
+        //public string FBProfileUrl { get; set; }
+
+        //public string CreateDataString { get; set; }
+
 
     }
 }

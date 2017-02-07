@@ -9,6 +9,7 @@ using Microsoft.Azure.Mobile.Server.Config;
 using TPTwo.DataObjects;
 using TPTwo.Models;
 using Owin;
+using System.Data.Entity.Migrations;
 
 namespace TPTwo
 {
@@ -23,7 +24,15 @@ namespace TPTwo
                 .ApplyTo(config);
 
             // Use Entity Framework Code First to create database tables based on your DbContext
-            Database.SetInitializer(new MobileServiceInitializer());
+           // Database.SetInitializer(new MobileServiceInitializer());
+
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MobileServiceContext, Migrations.Configuration>());
+
+            //Step 1 in changing model
+//            var migrator = new DbMigrator(new TPTwo.Migrations.Configuration());//DbMigrationsConfiguration());
+//            migrator.Update();
+
+
 
             MobileAppSettingsDictionary settings = config.GetMobileAppSettingsProvider().GetMobileAppSettings();
 
@@ -44,23 +53,23 @@ namespace TPTwo
         }
     }
 
-    //    public class MobileServiceInitializer : CreateDatabaseIfNotExists<MobileServiceContext>
-    public class MobileServiceInitializer : DropCreateDatabaseIfModelChanges<MobileServiceContext>
+        public class MobileServiceInitializer : CreateDatabaseIfNotExists<MobileServiceContext>
+    //public class MobileServiceInitializer : DropCreateDatabaseIfModelChanges<MobileServiceContext>
     {
         protected override void Seed(MobileServiceContext context)
         {
-            //List<TodoItem> todoItems = new List<TodoItem>
-            //{
-            //    new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-            //    new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false }
-            //};
+            List<TodoItem> todoItems = new List<TodoItem>
+            {
+                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
+                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false }
+            };
 
-            //foreach (TodoItem todoItem in todoItems)
-            //{
-            //    context.Set<TodoItem>().Add(todoItem);
-            //}
+            foreach (TodoItem todoItem in todoItems)
+            {
+                context.Set<TodoItem>().Add(todoItem);
+            }
 
-            context.SurveyQuestions.AddRange(DataFactory.Questions);
+//            context.SurveyQuestions.AddRange(DataFactory.Questions);
 
             base.Seed(context);
         }
