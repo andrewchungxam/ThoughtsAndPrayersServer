@@ -9,7 +9,10 @@ namespace TPTwo.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+//            AutomaticMigrationsEnabled = true;
+
+
+            AutomaticMigrationsEnabled = false;
             //step 2 in changing model
             AutomaticMigrationDataLossAllowed = true;
 

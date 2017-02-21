@@ -186,12 +186,15 @@
     <Compile Include="Controllers\IdentityController.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
     <Compile Include="Controllers\ResponsesController.cs" />
+    <Compile Include="Controllers\ThinkingOfYouController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataFactory.cs" />
     <Compile Include="DataObjects\SurveyQuestion.cs" />
     <Compile Include="DataObjects\SurveyResponse.cs" />
+    <Compile Include="DataObjects\ThinkingOfYou.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="HelperMethods\QueryableExpandAttribute.cs" />
     <Compile Include="Migrations\201702062111020_test.cs" />
     <Compile Include="Migrations\201702062111020_test.Designer.cs">
       <DependentUpon>201702062111020_test.cs</DependentUpon>
@@ -203,6 +206,22 @@
     <Compile Include="Migrations\201702062329436_MyReset.cs" />
     <Compile Include="Migrations\201702062329436_MyReset.Designer.cs">
       <DependentUpon>201702062329436_MyReset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702070025175_newtext_fbprofile_createdatestring.cs" />
+    <Compile Include="Migrations\201702070025175_newtext_fbprofile_createdatestring.Designer.cs">
+      <DependentUpon>201702070025175_newtext_fbprofile_createdatestring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702151926533_Adding ThinkingOfYou.cs" />
+    <Compile Include="Migrations\201702151926533_Adding ThinkingOfYou.Designer.cs">
+      <DependentUpon>201702151926533_Adding ThinkingOfYou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702151938449_InQuestions_add_theFBID_remove_Icollection.cs" />
+    <Compile Include="Migrations\201702151938449_InQuestions_add_theFBID_remove_Icollection.Designer.cs">
+      <DependentUpon>201702151938449_InQuestions_add_theFBID_remove_Icollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702152219535_theID for ThinkingOfYou.cs" />
+    <Compile Include="Migrations\201702152219535_theID for ThinkingOfYou.Designer.cs">
+      <DependentUpon>201702152219535_theID for ThinkingOfYou.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
@@ -236,6 +255,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702062329436_MyReset.resx">
       <DependentUpon>201702062329436_MyReset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702070025175_newtext_fbprofile_createdatestring.resx">
+      <DependentUpon>201702070025175_newtext_fbprofile_createdatestring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702151926533_Adding ThinkingOfYou.resx">
+      <DependentUpon>201702151926533_Adding ThinkingOfYou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702151938449_InQuestions_add_theFBID_remove_Icollection.resx">
+      <DependentUpon>201702151938449_InQuestions_add_theFBID_remove_Icollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702152219535_theID for ThinkingOfYou.resx">
+      <DependentUpon>201702152219535_theID for ThinkingOfYou.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

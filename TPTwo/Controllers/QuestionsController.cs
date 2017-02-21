@@ -6,6 +6,7 @@ using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
 using TPTwo.DataObjects;
 using TPTwo.Models;
+using TPTwo.HelperMethods;
 
 namespace TPTwo.Controllers
 {
@@ -18,7 +19,10 @@ namespace TPTwo.Controllers
             DomainManager = new EntityDomainManager<SurveyQuestion>(context, Request);
         }
 
+
+
         // GET tables/Questions
+        [QueryableExpand("ThinkingOfYous")]
         public IQueryable<SurveyQuestion> GetAllSurveyQuestion()
         {
             return Query(); 

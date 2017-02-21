@@ -38,5 +38,7 @@ namespace TPTwo.Models
         public System.Data.Entity.DbSet<TPTwo.DataObjects.SurveyResponse> SurveyResponses { get; set; }
 
         public System.Data.Entity.DbSet<TPTwo.DataObjects.SurveyQuestion> SurveyQuestions { get; set; }
+
+        public System.Data.Entity.DbSet<TPTwo.DataObjects.ThinkingOfYou> ThinkingOfYous { get; set; }
     }
 }
