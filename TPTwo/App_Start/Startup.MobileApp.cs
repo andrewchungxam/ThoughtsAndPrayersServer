@@ -23,16 +23,23 @@ namespace TPTwo
                 .UseDefaultConfiguration()
                 .ApplyTo(config);
 
+
+            //TOGGLE 0
             // Use Entity Framework Code First to create database tables based on your DbContext
-           // Database.SetInitializer(new MobileServiceInitializer());
+            //Database.SetInitializer(new MobileServiceInitializer());
 
+
+            //TOGGLE 1
             //MahA method
-            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<MobileServiceContext, Migrations.Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MobileServiceContext, Migrations.Configuration>());
 
+
+
+            //TOGGLE 2
             //AC method
             //Step 1 in changing model
-            var migrator = new DbMigrator(new TPTwo.Migrations.Configuration());//DbMigrationsConfiguration());
-            migrator.Update();
+            //var migrator = new DbMigrator(new TPTwo.Migrations.Configuration());//DbMigrationsConfiguration());
+            //migrator.Update();
 
 
 

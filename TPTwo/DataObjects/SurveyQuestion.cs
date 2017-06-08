@@ -26,7 +26,6 @@ namespace TPTwo.DataObjects
         public string FBProfileUrl { get; set; }
 
         public string CreateDateString { get; set; }
-//        public ICollection<ThinkingOfYou> ThinkingOfYous { get; set; }
 
         public string theFBID { get; set; }
 

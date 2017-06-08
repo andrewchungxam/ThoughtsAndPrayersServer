@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201702152219535_theID for ThinkingOfYou.Designer.cs">
       <DependentUpon>201702152219535_theID for ThinkingOfYou.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702210036374_not_sure_why_collections_remain.cs" />
+    <Compile Include="Migrations\201702210036374_not_sure_why_collections_remain.Designer.cs">
+      <DependentUpon>201702210036374_not_sure_why_collections_remain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -267,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702152219535_theID for ThinkingOfYou.resx">
       <DependentUpon>201702152219535_theID for ThinkingOfYou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702210036374_not_sure_why_collections_remain.resx">
+      <DependentUpon>201702210036374_not_sure_why_collections_remain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

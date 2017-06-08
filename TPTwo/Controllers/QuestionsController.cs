@@ -22,10 +22,10 @@ namespace TPTwo.Controllers
 
 
         // GET tables/Questions
-        [QueryableExpand("ThinkingOfYous")]
+ //       [QueryableExpand("ThinkingOfYous")]
         public IQueryable<SurveyQuestion> GetAllSurveyQuestion()
         {
-            return Query(); 
+            return Query();
         }
 
         // GET tables/Questions/48D68C86-6EA6-4C25-AA33-223FC9A27959
@@ -37,7 +37,7 @@ namespace TPTwo.Controllers
         // PATCH tables/Questions/48D68C86-6EA6-4C25-AA33-223FC9A27959
         public Task<SurveyQuestion> PatchSurveyQuestion(string id, Delta<SurveyQuestion> patch)
         {
-             return UpdateAsync(id, patch);
+            return UpdateAsync(id, patch);
         }
 
         // POST tables/Questions
@@ -50,7 +50,7 @@ namespace TPTwo.Controllers
         // DELETE tables/Questions/48D68C86-6EA6-4C25-AA33-223FC9A27959
         public Task DeleteSurveyQuestion(string id)
         {
-             return DeleteAsync(id);
+            return DeleteAsync(id);
         }
     }
 }
